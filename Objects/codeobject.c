@@ -128,7 +128,7 @@ should_intern_string(PyObject *o)
 
     s = PyUnicode_1BYTE_DATA(o);
     e = s + PyUnicode_GET_LENGTH(o);
-    for (; s != e; s++) {
+    for (; s != e; s++) {    //for loop
         if (!Py_ISALNUM(*s) && *s != '_')
             return 0;
     }
